@@ -164,6 +164,24 @@ func (tl *TypeLoader) LoadTable() (map[string]*models.Type, error) {
 		tableMap[ti.TableName] = typeTpl
 	}
 
+	// process parents
+	for _, ti := range tableList {
+		if ti.ParentTableName == "" {
+			continue
+		}
+
+		if _, ok := tableMap[ti.TableName]; !ok {
+			continue
+		}
+
+		parent, ok := tableMap[ti.ParentTableName]
+		if !ok {
+			continue
+		}
+
+		tableMap[ti.TableName].Parent = parent
+	}
+
 	// validate custom type tables
 	for _, customTable := range tl.config.Tables {
 		_, ok := tableMap[customTable.Name]
@@ -250,8 +268,6 @@ func (tl *TypeLoader) LoadColumns(typeTpl *models.Type) error {
 
 	// process columns
 	for _, c := range columnList {
-		ignore := false
-
 		for _, ignoreField := range tl.ignoreFields {
 			if ignoreField == c.ColumnName {
 				// Skip adding this field if user has specified they are not
@@ -260,12 +276,8 @@ func (tl *TypeLoader) LoadColumns(typeTpl *models.Type) error {
 				// This could be useful for fields which are managed by the
 				// database (e.g. automatically updated timestamps) instead of
 				// via Go code.
-				ignore = true
+				continue
 			}
-		}
-
-		if ignore {
-			continue
 		}
 
 		len, nilVal, typ := parseSpannerType(c.DataType, !c.NotNull)

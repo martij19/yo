@@ -207,6 +207,26 @@ func TestLoader(t *testing.T) {
 								IndexName: "InterleavedKey",
 							},
 						},
+						Parent: &models.Type{
+							Name: "Parent",
+							PrimaryKeyFields: []*models.Field{
+								{ColumnName: "Id"},
+							},
+							Fields: []*models.Field{
+								{
+									Name:            "ID",
+									Type:            "int64",
+									OriginalType:    "int64",
+									NullValue:       "0",
+									Len:             -1,
+									ColumnName:      "Id",
+									SpannerDataType: "INT64",
+									IsNotNull:       true,
+									IsPrimaryKey:    true,
+								},
+							},
+							TableName: "Parent",
+						},
 					},
 					{
 						Name: "Parent",
