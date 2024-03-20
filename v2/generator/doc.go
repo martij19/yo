@@ -17,4 +17,4 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-package generator // import "go.mercari.io/yo/v2/generator"
+package generator // import "github.com/martij19/yo/v2/generator"

@@ -21,7 +21,7 @@ package internal
 
 import (
 	"github.com/jinzhu/inflection"
-	"go.mercari.io/yo/v2/config"
+	"github.com/martij19/yo/v2/config"
 )
 
 type Inflector interface {

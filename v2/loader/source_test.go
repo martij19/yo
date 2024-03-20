@@ -27,7 +27,7 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"go.mercari.io/yo/v2/test/testutil"
+	"github.com/martij19/yo/v2/test/testutil"
 )
 
 var (

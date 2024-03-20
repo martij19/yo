@@ -11,7 +11,7 @@ application is not officially supported as part of the Cloud Spanner product.
 ## Installation
 
 ```sh
-$ go get -u go.mercari.io/yo/v2
+$ go get -u github.com/martij19
 ```
 
 ## Quickstart

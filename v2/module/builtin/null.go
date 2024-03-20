@@ -20,7 +20,7 @@
 package builtin
 
 import (
-	"go.mercari.io/yo/v2/module"
+	"github.com/martij19/yo/v2/module"
 )
 
 type nullMod struct {

@@ -27,13 +27,13 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/martij19/yo/v2/config"
+	"github.com/martij19/yo/v2/generator"
+	"github.com/martij19/yo/v2/internal"
+	"github.com/martij19/yo/v2/loader"
+	"github.com/martij19/yo/v2/module"
+	"github.com/martij19/yo/v2/module/builtin"
 	"github.com/spf13/cobra"
-	"go.mercari.io/yo/v2/config"
-	"go.mercari.io/yo/v2/generator"
-	"go.mercari.io/yo/v2/internal"
-	"go.mercari.io/yo/v2/loader"
-	"go.mercari.io/yo/v2/module"
-	"go.mercari.io/yo/v2/module/builtin"
 )
 
 var (

@@ -22,7 +22,7 @@ package builtin
 import (
 	"testing"
 
-	"go.mercari.io/yo/v2/module"
+	"github.com/martij19/yo/v2/module"
 )
 
 func TestBuiltin(t *testing.T) {

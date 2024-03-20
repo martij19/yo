@@ -27,8 +27,8 @@ import (
 
 	"github.com/kenshaw/snaker"
 
-	"go.mercari.io/yo/v2/internal"
-	"go.mercari.io/yo/v2/models"
+	"github.com/martij19/yo/v2/internal"
+	"github.com/martij19/yo/v2/models"
 )
 
 // newTemplateFuncs returns a set of template funcs bound to the supplied args.

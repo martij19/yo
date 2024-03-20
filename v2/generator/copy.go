@@ -24,7 +24,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"go.mercari.io/yo/v2/module/builtin"
+	"github.com/martij19/yo/v2/module/builtin"
 )
 
 // CopyDefaultTemplates copies default templete files to dir.
